@@ -2,7 +2,10 @@
 // @route   GET /api/parts
 // @access  Private
 export const getParts = (req, res) => {
-    res.status(200).json({ message: 'get parts' });
+    if (!req.body.text) {
+        res.status(400);
+        throw new Error('Please add a text field');
+    }
 };
 
 // @desc    Add a part
