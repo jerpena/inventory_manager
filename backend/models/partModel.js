@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const partSchema = mongoose.Schema({
     partName: {
         type: String,
-        required: [true, 'Part name is required']
+        required: [true, 'is required']
     },
     description: {
         type: String,
-        required: [true, 'Part requires a description']
+        required: [true, 'is required']
     },
     vzwPartId: {
         type: String,
