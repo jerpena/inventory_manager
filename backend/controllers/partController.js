@@ -39,7 +39,9 @@ export const updatePart = asyncHandler(async (req, res) => {
         res.status(404);
         throw new Error('Part not found');
     }
-    const updatedPart = await Part.findByIdAndUpdate(req.params.id, req.body, options);
+    const updatedPart = await Part.findByIdAndUpdate(
+        req.params.id, req.body, options
+    );
 
     res.status(200).json(updatedPart);
 });
